@@ -18,7 +18,7 @@ app.post('/todos',(req,res)=>{
    });
 
     
-    todo.save().then((doc)=>{
+    todo.save().then((doc)=>{  
     res.send(doc);
 },(e)=>{
     res.status(400).send(e);
@@ -54,3 +54,6 @@ app.listen(8000,()=>{
 // },(e)=>{
 //    console.log('unable to save todo',e); 
 //}); 
+
+
+module.exports = {app}; 
